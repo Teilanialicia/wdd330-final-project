@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script type="module" src="./js/main.mjs"></script>
+  <title>NutriHealth | Healthy Recipes & Nutrition Tracker</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <h1 class="logo">NutriHealth</h1>
+    <nav>
+      <a href="#" class="nav-link">Home</a>
+      <a href="#" class="nav-link">Favorites</a>
+      <a href="#" class="nav-link">Shopping List</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Find Delicious Recipes,  
+        <span class="green-text">Optimized for Your Health.</span>
+      </h2>
+      <p>Search meals, track nutrition, and save your favorites — all in one place.</p>
+
+      <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search for a recipe (e.g., chicken, pasta, vegan)">
+        <button id="searchBtn">Search</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feature recipes -->
+  <section class="featured-section">
+    <h3 class="section-title">Featured Recipes</h3>
+
+    <div id="recipeGrid" class="recipe-grid">
+      <!-- JS will fill this -->
+      <p class="placeholder">Search for a recipe to begin!</p>
+    </div>
+  </section>
+
+  <script type="module" src="./js/main.mjs"></script>
+</body>
+</html>
