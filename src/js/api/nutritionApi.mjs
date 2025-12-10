@@ -9,7 +9,7 @@ export async function getNutrition(query) {
           "X-Api-Key": API_KEY,
         },
       }
-    ); 
+    );
 
     if (!response.ok) {
       console.error("Nutrition API error:", response.status);

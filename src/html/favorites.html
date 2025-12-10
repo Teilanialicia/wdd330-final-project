@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NutriHealth | Favorites</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <h1 class="logo">NutriHealth</h1>
+    <nav>
+      <a href="../index.html" class="nav-link">Home</a>
+      <a href="./favorites.html" class="nav-link">Favorites</a>
+      <a href="#" class="nav-link">Shopping List</a>
+    </nav>
+  </header>
+
+  <!-- Favorites Section -->
+  <main class="container">
+    <section class="featured-section">
+      <h2 class="section-title">Your Favorite Recipes</h2>
+
+      <!-- Grid for favorite cards -->
+      <div id="favoritesGrid" class="recipe-grid"></div>
+
+      <p id="emptyMessage" class="placeholder hidden">
+        You haven't saved any recipes yet!<br>
+        Search for recipes and add them to your favorites.
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>NutriHealth © 2025</p>
+  </footer>
+
+  <script type="module" src="../js/pages/favoritesPage.mjs"></script>
+</body>
+</html>
