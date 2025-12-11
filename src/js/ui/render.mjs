@@ -11,6 +11,4 @@ export function renderRecipeCards(meals, container) {
   }
 
   meals.forEach(meal => container.appendChild(createRecipeCard(meal)));
-  const cards = document.querySelectorAll(".recipe-card.hide");
-  cards.forEach(card => card.classList.remove('hide'));
 }

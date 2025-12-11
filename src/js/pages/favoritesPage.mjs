@@ -8,8 +8,14 @@ const emptyMessage = document.getElementById("emptyMessage");
 function renderFavoriteCards() {
   const favorites = getFavorites();
 
-  if (!favorites || favorites.length === 0)
+  if (!favorites || favorites.length === 0) {
+    favoritesGrid.innerHTML = '';
+    emptyMessage.innerHTML = `<p id="emptyMessage" class="placeholder hidden">
+        You haven't saved any recipes yet!<br>
+        Search for recipes and add them to your favorites.
+      </p>`;
     return;
+  }
 
   emptyMessage.innerHTML = "";
 
