@@ -1,3 +1,5 @@
+// This file interacts with the api-ninjas API. It gets the nutritional value for the recipes' ingredients.
+
 const API_KEY = "E7wKL8t51k9C+19gse7GSA==7qxkLs20RFHgYuW1";
 
 export async function getNutrition(query) {

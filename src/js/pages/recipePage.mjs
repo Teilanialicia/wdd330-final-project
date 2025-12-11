@@ -1,3 +1,6 @@
+// This handles the javascript for when a user clicks on a recipe card after searching for it.
+// It executes all of the API calls to api-ninjas and puts the data into the card
+
 import { getMealById } from '../api/mealApi.mjs';
 import { getNutrition } from '../api/nutritionApi.mjs';
 import { saveFavorite, getFavorites } from '../data/favorites.mjs';
@@ -34,8 +37,7 @@ function renderDetails(meal, ingredients, nutrition) {
       <h2 class="detail-title">${meal.strMeal}</h2>
 
       <div class="detail-buttons">
-        <button class="button" id="favBtn">⭐ Add to Favorites</button>
-        <button class="button" id="shopBtn">Add to Shopping List</button>
+        <button class="button" id="favBtn">Add to Favorites</button>
       </div>
 
       <h3>Ingredients</h3>
@@ -46,7 +48,7 @@ function renderDetails(meal, ingredients, nutrition) {
       <h3>Nutrition (per ingredient)</h3>
       <ul>
         ${nutrition.map(n => `
-          <li>${n.name}: ${n.calories} cal, ${n.protein_g}g protein</li>
+          <li>${n.name}: ${n.cholesterol_mg}g Carbohydrates, ${n.fat_total_g}g Fat, ${n.sodium_mg}mg Sodium ${n.sugar_g}g Sugar</li>
         `).join("")}
       </ul>
     </div>
@@ -67,12 +69,6 @@ function renderDetails(meal, ingredients, nutrition) {
     favBtn.textContent = "Saved!";
     favBtn.disabled = true;
     alert(`${meal.strMeal} added to favorites!`);
-  });
-
-  const shopBtn = document.getElementById("shopBtn");
-  shopBtn.addEventListener("click", () => {
-    addToShoppingList(ingredients); // Make sure addToShoppingList is defined elsewhere
-    alert("Added to shopping list!");
   });
 }
 

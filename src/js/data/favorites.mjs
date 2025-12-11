@@ -1,3 +1,5 @@
+// This file interacts with the "database" or localstorage. It stores, removes, and retrieves the favorites from local storage.
+
 const FAVORITES_KEY = "favoriteFoods";
 
 export function getFavorites() {
@@ -8,7 +10,6 @@ export function getFavorites() {
 export function saveFavorite(item) {
   const favorites = getFavorites();
   
-  // avoid duplicates by name
   if (!favorites.some(f => f.name === item.name)) {
     favorites.push(item);
     localStorage.setItem(FAVORITES_KEY, JSON.stringify(favorites));

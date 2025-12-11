@@ -1,3 +1,5 @@
+// This creates a recipe card that is used on the index and favorites pages
+
 export function createRecipeCard(meal) {
   const card = document.createElement("div");
   card.className = "recipe-card";

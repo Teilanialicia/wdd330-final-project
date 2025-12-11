@@ -1,3 +1,5 @@
+// This handles the javascript for the favorites.html page
+
 import { getFavorites, removeFavorite } from "../data/favorites.mjs";
 
 const favoritesGrid = document.getElementById("favoritesGrid");
@@ -6,12 +8,8 @@ const emptyMessage = document.getElementById("emptyMessage");
 function renderFavoriteCards() {
   const favorites = getFavorites();
 
-  if (!favorites || favorites.length === 0) {
-    favoritesGrid.innerHTML = `
-      <p class="empty-message">You have no favorite recipes yet.</p>
-    `;
+  if (!favorites || favorites.length === 0)
     return;
-  }
 
   emptyMessage.innerHTML = "";
 
